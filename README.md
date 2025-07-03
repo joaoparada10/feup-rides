@@ -59,8 +59,6 @@ Picture this: you're heading to FEUP, but instead of battling traffic and huntin
 
 ## Requirements
 
-Checkout our [Product backlog](https://github.com/orgs/FEUP-LEIC-ES-2023-24/projects/6) for our user stories, user interface mockups and acceptance tests. 
-
 ### Domain model
 
 #### UML Class Diagram
@@ -137,8 +135,6 @@ The first version of our apk is still very incomplete but we already managed to 
 
 You can find below information and references related with the project management in our team:
 <ul>
-<li> Backlog Management: Product backlog and Sprint backlog in our <a href="(https://github.com/orgs/FEUP-LEIC-ES-2023-24/projects/6)">Github Projects board </a></li>
-<li> Release management: <a href="https://github.com/FEUP-LEIC-ES-2023-24/2LEIC11T5/releases/tag/v0.1.0"> v0.1.0 </a>, <a href="https://github.com/FEUP-LEIC-ES-2023-24/2LEIC11T5/releases/tag/v0.2.0"> v0.2.0 </a> </li>
 <li> Definition of Ready:
 <ul><li> Ensure the User Stories or tasks are well-defined and understood by the team</li>
 <li> Clearly define the acceptance criteria for each US.</li>
