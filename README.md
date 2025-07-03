@@ -2,7 +2,7 @@
 
 Welcome to the documentation pages of the _FEUP Rides_!
 
-** Demonstratitve purposes only.**
+**Demonstratitve purposes only.**
 
 
 
