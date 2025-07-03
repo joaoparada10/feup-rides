@@ -4,7 +4,7 @@ Welcome to the documentation pages of the _FEUP Rides_!
 
 **Demonstratitve purposes only.**
 
-
+Main focus of this project was to experiment on agile software development.
 
 You can find here details about _FEUP Rides_, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by type of activities: 
 
