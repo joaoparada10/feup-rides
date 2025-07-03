@@ -1,0 +1,80 @@
+@startuml
+
+class Passenger {
+    -id: int
+    -name: string
+    -age: int
+    -rating: float
+    -contactInfo: string
+    -address: string
+    +requestRide(): boolean
+    +rateDriver(driverId: int, rating: float): boolean
+}
+
+class Driver {
+    -id: int
+    -name: string
+    -age: int
+    -address: string
+    -schedule: string
+    -carModel: string
+    -licensePlate: string
+    -rating: float
+    -availableSeats: int
+    +isAvaiable(): boolean
+    +acceptRide(): boolean
+    +finishRide(): boolean
+}
+
+class Ride {
+    -id: int
+    -driverId: int
+    -passengerId: int
+    -pickupLocation: string
+    -dropoffLocation: string
+    -status: string
+    +confirmRide(): boolean
+    +cancelRide(): boolean
+}
+
+class PickupPoint {
+    -id: int
+    -name: string
+    -location: string
+}
+/'
+    Textual Description:
+
+    The system facilitates car rides for between FEUP community members traveling to and from FEUP. 
+    It involves three main entities: Passenger, Driver, and PickupPoint.
+
+    
+Passenger: Represents individuals seeking car rides. Each Passenger has a unique identifier (id), a name, age, contact information, and a rating provided by other users. They can request rides from avaiable drivers by scheduling a request or in real-time. Passengers can also rate drivers based on their experience.
+
+    
+Driver: Represents individuals willing to provide car rides to Passengers. Each Driver has a unique identifier (id), a name, age, car model, license plate, and a rating provided by passengers. Drivers specify the number of available seats in their vehicles. They can accept ride requests from Passengers and mark rides as finished upon completion.
+
+    
+Ride: Represents a ride request or offer made by a passenger and accepted by a driver. Each Ride has a unique identifier (id), references to the driver and passenger involved, pickup and drop-off locations, and a status indicating whether the ride is confirmed or canceled.
+
+    
+PickupPoint: Represents locations around FEUP where users can gather to find or offer rides. Each PickupPoint has a unique identifier (id), a name, location coordinates, maximum capacity (number of passengers it can accommodate), and current occupancy (number of passengers currently present). Passengers can associate themselves with a PickupPoint to request rides in real-time.
+
+    The relationships depicted in the diagram are as follows:
+    
+Each Passenger may have zero or more associated Rides (0..).
+  
+Each Driver may have zero or more associated Rides (0..
+).
+Each PickupPoint may have zero or more associated Rides (0..*).
+
+    This system aims to facilitate transportation for members of the FEUP community by connecting them with drivers willing to offer rides, utilizing multiple pickup points to streamline the process.
+'/
+
+
+Passenger "1" -- "0.." Ride : takes >
+Driver "1" -- "0.." Ride : gives >
+PickupPoint "1" -- "0..*" Ride : belongs to >
+
+
+@enduml

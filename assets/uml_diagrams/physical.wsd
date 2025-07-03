@@ -1,0 +1,28 @@
+@startuml
+
+node "User Mobile Device" {
+    component "FEUPRides App (Flutter)" {
+        [User Interface]
+        [Authentication]
+        [Ride Management]
+    }
+}
+
+node "Firebase Services" {
+    [Firebase Authentication]
+    database "Cloud Firestore"
+    [Push Notifications]
+    [In-App Messaging]
+}
+
+node "Google Maps" {
+    [Location Services]
+}
+
+[Ride Management] --> [Cloud Firestore]
+[Ride Management] --> [Location Services]
+[Authentication] --> [Firebase Authentication]
+[User Interface] --> [Push Notifications]
+[User Interface] --> [In-App Messaging]
+
+@enduml

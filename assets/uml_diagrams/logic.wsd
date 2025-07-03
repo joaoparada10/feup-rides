@@ -1,0 +1,18 @@
+@startuml
+
+package "FEUP Rides App" as App {
+    [User Interface]
+    [Ride Management Logic]
+}
+
+package "External Services" as External {
+    [Google Maps SDK]
+    [Firebase services]
+}
+[User Interface] --> [Ride Management Logic]
+[Ride Management Logic] --> [Firebase services]
+[Ride Management Logic] --> [Google Maps SDK]
+[User Interface] --> [Firebase services]
+
+
+@enduml
